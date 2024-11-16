@@ -2,7 +2,7 @@
 def PrintParams(a = 1, b = 'строка', c = True):
     print(f"a={a}\nb={b}\nc={c}",end="\n\n")
 
-def Main3_3():
+def Main():
     print("Вызов PrintParams")
     PrintParams()
     PrintParams(0)
