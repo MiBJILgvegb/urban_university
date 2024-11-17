@@ -41,6 +41,7 @@
     <Compile Include="module_3_2.py" />
     <Compile Include="module_3_3.py" />
     <Compile Include="module_3_4.py" />
+    <Compile Include="module_3_5.py" />
     <Compile Include="urban_university.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
