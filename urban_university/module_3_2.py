@@ -1,7 +1,7 @@
 # coding: cp1251
 
 def EmailValidate(email):
-    return (("@" in str(email))and((".com" in str(email))or(".ru" in str(email))or(".net" in str(email))))
+    return (("@" in str(email))and(str(email).endswith(".com",".ru",".net")))
 
 def SendEmail(message, recipient, *,sender = "university.help@gmail.com"):
     global defaultSender
@@ -14,7 +14,7 @@ def SendEmail(message, recipient, *,sender = "university.help@gmail.com"):
     if not str(sender)== defaultSender:
         print(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса <{sender}> на адрес <{recipient}>.")
     else:
-        print(f"Письмо успешно отправлено с адреса <sender> на адрес <{recipient}>.")
+        print(f"Письмо успешно отправлено с адреса <{sender}> на адрес <{recipient}>.")
 
 defaultSender="university.help@gmail.com"
 SendEmail('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
