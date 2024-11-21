@@ -1,10 +1,9 @@
-# coding: cp1251
-def GetMultipliedDigits(number):
+ï»¿def GetMultipliedDigits(number):
     if(len(str(number))==1):
        return number
     else:
         return int(str(number)[0])*GetMultipliedDigits(int(str(number)[1:]))
 
 def Main():
-    number=input("Ââåäèòå ÷èñëî: ")
+    number=input("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ")
     print(GetMultipliedDigits(number))

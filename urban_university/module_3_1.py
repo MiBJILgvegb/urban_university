@@ -1,6 +1,4 @@
-﻿# coding: cp1251
-
-def CountCalls():
+﻿def CountCalls():
     global calls
     calls += 1
 

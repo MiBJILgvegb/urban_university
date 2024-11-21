@@ -1,6 +1,4 @@
-﻿# coding: cp1251
-
-def EmailValidate(email):
+﻿def EmailValidate(email):
     return (("@" in str(email))and(str(email).endswith(".com",".ru",".net")))
 
 def SendEmail(message, recipient, *,sender = "university.help@gmail.com"):

@@ -1,9 +1,8 @@
-# coding: cp1251
-def PrintParams(a = 1, b = 'строка', c = True):
+п»їdef PrintParams(a = 1, b = 'СЃС‚СЂРѕРєР°', c = True):
     print(f"a={a}\nb={b}\nc={c}",end="\n\n")
 
 def Main():
-    print("Вызов PrintParams")
+    print("Р’С‹Р·РѕРІ PrintParams")
     PrintParams()
     PrintParams(0)
     PrintParams(0,'asdf')
@@ -11,12 +10,12 @@ def Main():
     PrintParams(b=25)
     PrintParams(c=[1,2,3])
 
-    print("Распаковка")
-    values_list=[0, 'строка0', False]
-    values_dict={'a' : 1, 'b' : 'строка', 'c' : True}
+    print("Р Р°СЃРїР°РєРѕРІРєР°")
+    values_list=[0, 'СЃС‚СЂРѕРєР°0', False]
+    values_dict={'a' : 1, 'b' : 'СЃС‚СЂРѕРєР°', 'c' : True}
     PrintParams(*values_list)
     PrintParams(**values_dict)
 
-    print("Распаковка2")
-    values_list_2 =[0, 'строка1']
+    print("Р Р°СЃРїР°РєРѕРІРєР°2")
+    values_list_2 =[0, 'СЃС‚СЂРѕРєР°1']
     PrintParams(*values_list_2,42)

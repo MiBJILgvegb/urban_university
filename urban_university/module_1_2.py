@@ -1,6 +1,5 @@
-# coding: cp1251
-completedTasks=12
+п»їcompletedTasks=12
 spendedHours=1.5
 courseName= 'Python'
 tasksPerHourse=spendedHours/completedTasks
-print('Курс:', courseName, 'всего задач:',completedTasks, 'затрачено часов:', spendedHours, 'среднее время выполнения:', tasksPerHourse)
+print('РљСѓСЂСЃ:', courseName, 'РІСЃРµРіРѕ Р·Р°РґР°С‡:',completedTasks, 'Р·Р°С‚СЂР°С‡РµРЅРѕ С‡Р°СЃРѕРІ:', spendedHours, 'СЃСЂРµРґРЅРµРµ РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ:', tasksPerHourse)

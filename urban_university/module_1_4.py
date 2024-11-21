@@ -1,10 +1,8 @@
-# coding: cp1251
+п»їmy_string=input("Р’РІРµРґРёС‚Рµ С‚РµСЃС‚РѕРІСѓСЋ СЃС‚СЂРѕРєСѓ: ")
 
-my_string=input("Введите тестовую строку: ")
-
-print("Длина строки: ",len(my_string))
-print("В верхнем регистре: ",my_string.upper())
-print("В нижнем регистре: ",my_string.lower())
-print("Без пробелов: ",my_string.replace(" ",""))
-print("Первый символ: ",my_string[0])
-print("Последний символ: ",my_string[-1])
+print("Р”Р»РёРЅР° СЃС‚СЂРѕРєРё: ",len(my_string))
+print("Р’ РІРµСЂС…РЅРµРј СЂРµРіРёСЃС‚СЂРµ: ",my_string.upper())
+print("Р’ РЅРёР¶РЅРµРј СЂРµРіРёСЃС‚СЂРµ: ",my_string.lower())
+print("Р‘РµР· РїСЂРѕР±РµР»РѕРІ: ",my_string.replace(" ",""))
+print("РџРµСЂРІС‹Р№ СЃРёРјРІРѕР»: ",my_string[0])
+print("РџРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР»: ",my_string[-1])
