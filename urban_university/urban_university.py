@@ -1,4 +1,4 @@
-import module_3_6
+import module_3_1
 
 
-module_3_6.Main()
+module_3_1.Main()

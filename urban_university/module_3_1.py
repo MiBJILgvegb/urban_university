@@ -6,14 +6,14 @@ def CountCalls():
 
 def StringInfo(string):
     CountCalls()
-    return {len(string),string.upper(),string.lower()}
+    return [len(string),string.upper(),string.lower()]
 
 def IsContains(string,stringsList):
     CountCalls()
     i=0
     result=False
     while(i<len(stringsList)):
-        if(string.lower() in stringsList[i]):
+        if(string.lower() in stringsList[i][2]):
             result=True
             break
         i+=1
