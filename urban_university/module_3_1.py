@@ -1,4 +1,4 @@
-# coding: cp1251
+п»ї# coding: cp1251
 
 def CountCalls():
     global calls
@@ -21,10 +21,10 @@ def IsContains(string,stringsList):
 
 calls=0
 strings=[]
-i=int(input("Вводимое кол-во строк: "))
+i=int(input("Р’РІРѕРґРёРјРѕРµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє: "))
 for i in range(0,i):
     strings.append(StringInfo(input()))
 
-print(f"Инфо по введенным строкам: {strings}")
-print(IsContains(input("Проверяемая строка: "),strings))
+print(f"РРЅС„Рѕ РїРѕ РІРІРµРґРµРЅРЅС‹Рј СЃС‚СЂРѕРєР°Рј: {strings}")
+print(IsContains(input("РџСЂРѕРІРµСЂСЏРµРјР°СЏ СЃС‚СЂРѕРєР°: "),strings))
 print(calls)

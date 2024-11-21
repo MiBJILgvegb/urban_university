@@ -1,4 +1,4 @@
-# coding: cp1251
+п»ї# coding: cp1251
 
 def EmailValidate(email):
     return (("@" in str(email))and(str(email).endswith(".com",".ru",".net")))
@@ -6,18 +6,18 @@ def EmailValidate(email):
 def SendEmail(message, recipient, *,sender = "university.help@gmail.com"):
     global defaultSender
     if (not EmailValidate(recipient))or(not EmailValidate(sender)):
-        print(f"Невозможно отправить письмо с адреса <{sender}> на адрес <{recipient}>")
+        print(f"РќРµРІРѕР·РјРѕР¶РЅРѕ РѕС‚РїСЂР°РІРёС‚СЊ РїРёСЃСЊРјРѕ СЃ Р°РґСЂРµСЃР° <{sender}> РЅР° Р°РґСЂРµСЃ <{recipient}>")
         return
     if str(sender)==str(recipient):
-        print("Нельзя отправить письмо самому себе!")
+        print("РќРµР»СЊР·СЏ РѕС‚РїСЂР°РІРёС‚СЊ РїРёСЃСЊРјРѕ СЃР°РјРѕРјСѓ СЃРµР±Рµ!")
         return
     if not str(sender)== defaultSender:
-        print(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса <{sender}> на адрес <{recipient}>.")
+        print(f"РќР•РЎРўРђРќР”РђР РўРќР«Р™ РћРўРџР РђР’РРўР•Р›Р¬! РџРёСЃСЊРјРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ СЃ Р°РґСЂРµСЃР° <{sender}> РЅР° Р°РґСЂРµСЃ <{recipient}>.")
     else:
-        print(f"Письмо успешно отправлено с адреса <{sender}> на адрес <{recipient}>.")
+        print(f"РџРёСЃСЊРјРѕ СѓСЃРїРµС€РЅРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ СЃ Р°РґСЂРµСЃР° <{sender}> РЅР° Р°РґСЂРµСЃ <{recipient}>.")
 
 defaultSender="university.help@gmail.com"
-SendEmail('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
-SendEmail('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
-SendEmail('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
-SendEmail('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
+SendEmail('Р­С‚Рѕ СЃРѕРѕР±С‰РµРЅРёРµ РґР»СЏ РїСЂРѕРІРµСЂРєРё СЃРІСЏР·Рё', 'vasyok1337@gmail.com')
+SendEmail('Р’С‹ РІРёРґРёС‚Рµ СЌС‚Рѕ СЃРѕРѕР±С‰РµРЅРёРµ РєР°Рє Р»СѓС‡С€РёР№ СЃС‚СѓРґРµРЅС‚ РєСѓСЂСЃР°!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+SendEmail('РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РёСЃРїСЂР°РІСЊС‚Рµ Р·Р°РґР°РЅРёРµ', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
+SendEmail('РќР°РїРѕРјРёРЅР°СЋ СЃР°РјРѕРјСѓ СЃРµР±Рµ Рѕ РІРµР±РёРЅР°СЂРµ', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
