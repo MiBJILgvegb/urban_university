@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f0124b91-c45f-47af-be03-587fe3d2d025</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>module_4_2.py</StartupFile>
+    <StartupFile>module_5_1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -46,8 +46,14 @@
     <Compile Include="module_3_6.py" />
     <Compile Include="module_4_1.py" />
     <Compile Include="module_4_2.py" />
+    <Compile Include="module_5\clHouse.py" />
+    <Compile Include="module_5\__init__.py" />
+    <Compile Include="module_5_1.py" />
     <Compile Include="true_math.py" />
     <Compile Include="urban_university.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="module_5\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
