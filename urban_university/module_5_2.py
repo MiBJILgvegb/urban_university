@@ -2,4 +2,7 @@
 
 house=House(input("Название дома - "),int(input("Количество этажей - ")))
 
-house.go_to(int(input("Куда поедем? - ")))
+print("__str__")
+house.__str__()
+print("__len__")
+house.__len__()

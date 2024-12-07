@@ -49,6 +49,7 @@
     <Compile Include="module_5\clHouse.py" />
     <Compile Include="module_5\__init__.py" />
     <Compile Include="module_5_1.py" />
+    <Compile Include="module_5_2.py" />
     <Compile Include="true_math.py" />
     <Compile Include="urban_university.py" />
   </ItemGroup>
