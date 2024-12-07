@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f0124b91-c45f-47af-be03-587fe3d2d025</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>module_5_2.py</StartupFile>
+    <StartupFile>module_5_3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -50,6 +50,7 @@
     <Compile Include="module_5\__init__.py" />
     <Compile Include="module_5_1.py" />
     <Compile Include="module_5_2.py" />
+    <Compile Include="module_5_3.py" />
     <Compile Include="true_math.py" />
     <Compile Include="urban_university.py" />
   </ItemGroup>
