@@ -3,6 +3,6 @@
 house=House(input("Название дома - "),int(input("Количество этажей - ")))
 
 print("__str__")
-house.__str__()
+print(house.__str__())
 print("__len__")
-house.__len__()
+print(house.__len__())
