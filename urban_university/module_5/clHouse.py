@@ -1,4 +1,12 @@
 ﻿class House:
+    houses_history=[]
+    #5.4
+    def __new__(cls, *args, **kwargs):
+        cls.houses_history.append(args[0])
+        return object.__new__(cls)
+    def __del__(cls):
+        print(f"{cls.name} снесён, но он останется в истории");
+    #5.1
     def __init__(self,name,number_of_floors):
         if(not(type(name) is str))or(len(str(name))<=0):
             print("Имя объекта должно быть строкой длиннее нуля символов.")
