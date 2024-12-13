@@ -8,12 +8,12 @@
         print(f"{self.name} снесён, но он останется в истории");
     #5.1
     def __init__(self,name,number_of_floors):
-        if(not(type(name) is str))or(len(str(name))<=0):
+        if(not(isinstance(name,str)))or(len(str(name))<=0):
             print("Имя объекта должно быть строкой длиннее нуля символов.")
             return None
         self.name = name
         
-        if(not(type(number_of_floors) is int))or(number_of_floors<=0):
+        if(not(isinstance(number_of_floors,int)))or(number_of_floors<=0):
             print("Количество этажей должно быть числом больше нуля.")
             return None
         self.number_of_floors = number_of_floors

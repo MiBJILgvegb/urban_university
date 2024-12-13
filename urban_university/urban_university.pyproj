@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f0124b91-c45f-47af-be03-587fe3d2d025</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>module_5_4.py</StartupFile>
+    <StartupFile>module_5_5.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -47,11 +47,15 @@
     <Compile Include="module_4_1.py" />
     <Compile Include="module_4_2.py" />
     <Compile Include="module_5\clHouse.py" />
+    <Compile Include="module_5\clUser.py" />
+    <Compile Include="module_5\clVideo.py" />
+    <Compile Include="module_5\UrTube.py" />
     <Compile Include="module_5\__init__.py" />
     <Compile Include="module_5_1.py" />
     <Compile Include="module_5_2.py" />
     <Compile Include="module_5_3.py" />
     <Compile Include="module_5_4.py" />
+    <Compile Include="module_5_5.py" />
     <Compile Include="true_math.py" />
     <Compile Include="urban_university.py" />
   </ItemGroup>
