@@ -49,18 +49,23 @@
     <Compile Include="module_5\clHouse.py" />
     <Compile Include="module_5\clUser.py" />
     <Compile Include="module_5\clVideo.py" />
-    <Compile Include="module_5\UrTube.py" />
+    <Compile Include="module_5\clUrTube.py" />
     <Compile Include="module_5\__init__.py" />
     <Compile Include="module_5_1.py" />
     <Compile Include="module_5_2.py" />
     <Compile Include="module_5_3.py" />
     <Compile Include="module_5_4.py" />
     <Compile Include="module_5_5.py" />
+    <Compile Include="module_6\clAnimal.py" />
+    <Compile Include="module_6\clPlant.py" />
+    <Compile Include="module_6\__init__.py" />
+    <Compile Include="module_6_1.py" />
     <Compile Include="true_math.py" />
     <Compile Include="urban_university.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="module_5\" />
+    <Folder Include="module_6\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

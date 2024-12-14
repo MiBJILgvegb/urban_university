@@ -1,4 +1,4 @@
-﻿from module_5.UrTube import *
+﻿from module_5.clUrTube import *
 
 ur = UrTube()
 v1 = Video('Лучший язык программирования 2024 года', 200)
