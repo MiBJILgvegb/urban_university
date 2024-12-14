@@ -1,11 +1,9 @@
-﻿class Plant:
-    edible = False
+﻿from module_6.clPlant import *
 
-    def __init__(self,name,edible=False):
+class Fruit (Plant):
+    def __init__(self,name,edible=True):
         if(not isinstance(name,str)):
             print("Имя должно быть строкой.")
             return None
         self.name=name
         self.edible=edible
-    def __str__(self):
-        return self.name

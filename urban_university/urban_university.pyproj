@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f0124b91-c45f-47af-be03-587fe3d2d025</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>module_5_5.py</StartupFile>
+    <StartupFile>module_6_1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -57,6 +57,10 @@
     <Compile Include="module_5_4.py" />
     <Compile Include="module_5_5.py" />
     <Compile Include="module_6\clAnimal.py" />
+    <Compile Include="module_6\clFruit.py" />
+    <Compile Include="module_6\clFlower.py" />
+    <Compile Include="module_6\clPredator.py" />
+    <Compile Include="module_6\clMammal.py" />
     <Compile Include="module_6\clPlant.py" />
     <Compile Include="module_6\__init__.py" />
     <Compile Include="module_6_1.py" />
