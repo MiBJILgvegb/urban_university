@@ -8,8 +8,6 @@ class Animal:
             print("Имя должно быть строкой.")
             return None
         self.name=name
-        self.alive = True
-        self.fed = False
     def eat(self, food):
         if(not isinstance(food,Plant)):
             print(f"{food.name} - не еда.")
