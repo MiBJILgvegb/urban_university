@@ -1,0 +1,209 @@
+Index: urban_university/module_6/clBird.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/urban_university/module_6/clBird.py b/urban_university/module_6/clBird.py
+new file mode 100644
+--- /dev/null	(date 1734356349601)
++++ b/urban_university/module_6/clBird.py	(date 1734356349601)
+@@ -0,0 +1,6 @@
++from clAnimal import *
++import random
++class Bird(Animal):
++    beak = True
++    def lay_eggs(self):
++        print(f"Here are(is) {random.randint(0, 4)} eggs for you")
+\ No newline at end of file
+Index: urban_university/module_6/clAquaticAnimal.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/urban_university/module_6/clAquaticAnimal.py b/urban_university/module_6/clAquaticAnimal.py
+new file mode 100644
+--- /dev/null	(date 1734356408930)
++++ b/urban_university/module_6/clAquaticAnimal.py	(date 1734356408930)
+@@ -0,0 +1,3 @@
++from clAnimal import *
++class AquaticAnimal(Animal):
++    pass
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1734348831524)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1734348831524)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/urban_university.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/urban_university.iml b/.idea/urban_university.iml
+new file mode 100644
+--- /dev/null	(date 1734348830150)
++++ b/.idea/urban_university.iml	(date 1734348830150)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="jdk" jdkName="Python 3.12" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1734348830987)
++++ b/.idea/modules.xml	(date 1734348830987)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/urban_university.iml" filepath="$PROJECT_DIR$/.idea/urban_university.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1734348668794)
++++ b/.idea/.gitignore	(date 1734348668794)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1734349384559)
++++ b/.idea/misc.xml	(date 1734349384559)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.12" />
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1734348832704)
++++ b/.idea/vcs.xml	(date 1734348832704)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: urban_university/module_6/clAnimal.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from module_6.clPlant import *\r\nclass Animal:\r\n    alive = True\r\n    fed = False\r\n    \r\n    def __init__(self,name):\r\n        if(not isinstance(name,str)):\r\n            print(\"Имя должно быть строкой.\")\r\n            return None\r\n        self.name=name\r\n    def eat(self, food):\r\n        if(not isinstance(food,Plant)):\r\n            print(f\"{food.name} - не еда.\")\r\n            return False\r\n        if(not food.edible):\r\n            print(f\"{self.name} не стал есть {food.name}.\")\r\n            self.alive=False\r\n            return False\r\n        print(f\"{self.name} съел {food.name}.\")\r\n        self.fed=True\r\n        return True\r\n    def __str__(self):\r\n        return self.name
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/urban_university/module_6/clAnimal.py b/urban_university/module_6/clAnimal.py
+--- a/urban_university/module_6/clAnimal.py	(revision f805d3efb411283c441ad0b560f00194f0c39fd7)
++++ b/urban_university/module_6/clAnimal.py	(date 1734356034811)
+@@ -1,13 +1,26 @@
+-from module_6.clPlant import *
++from clPlant import *
+ class Animal:
+     alive = True
+     fed = False
++    #6.3
++    live = True
++    sound = None
++    _DEGREE_OF_DANGER = 0
+     
+-    def __init__(self,name):
++    def __init__(self,name,cords,speed):
+         if(not isinstance(name,str)):
+             print("Имя должно быть строкой.")
+-            return None
++            return
+         self.name=name
++        #6.3
++        if (not isinstance(cords, list)):
++            print("Координаты долдны указываться как массив.")
++            return
++        self._cords = [0, 0, 0]
++        if (not isinstance(speed, int)):
++            print("Скорость должна быть указана целым числом.")
++            return
++        self.speed=speed
+     def eat(self, food):
+         if(not isinstance(food,Plant)):
+             print(f"{food.name} - не еда.")
+@@ -18,6 +31,31 @@
+             return False
+         print(f"{self.name} съел {food.name}.")
+         self.fed=True
+-        return True
++        return
+     def __str__(self):
+-        return self.name
+\ No newline at end of file
++        return self.name
++
++    # 6.3
++    def move(self, d):
++        if (not isinstance(d, tuple)):
++            print("Координаты должны быть переданы в кортеже.")
++            return False
++        d1 = [self._cords[0] * self.speed, self._cords[1] * self.speed, self._cords[2] * self.speed]
++        if (d1[2] <= 0):
++            print("It's too deep, i can't dive :(")
++            return False
++        self._cords = d1
++        return
++    def get_cords(self):
++        print(f"X: {self._cords[0]}, Y: {self._cords[1]}, Z: {self._cords[2]}")
++        return
++    def attack(self):
++        echo="Be careful, i'm attacking you 0_0"
++        if(self._DEGREE_OF_DANGER<5):
++            echo="Sorry, i'm peaceful :)"
++        print(echo)
++        return
++    def speak(self):
++        if(not isinstance(self.sound,None)):
++            print(self.sound)
++        return
