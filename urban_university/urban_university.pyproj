@@ -72,6 +72,7 @@
     <Compile Include="module_6_1.py" />
     <Compile Include="module_6_2.py" />
     <Compile Include="module_6_3.py" />
+    <Compile Include="module_6_4.py" />
     <Compile Include="true_math.py" />
     <Compile Include="urban_university.py" />
   </ItemGroup>
