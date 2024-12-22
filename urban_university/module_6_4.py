@@ -1,126 +1,112 @@
 ﻿import math
-from functools import singledispatch
 
 class Figure:
     sides_count = 0
     __sides=[]
     __color=[0,0,0]
     filled=False
-#перегрузка метода для валидации цвета
-    @singledispatch
+    
     def __is_valid_color(self,color):
-        pass
-#https://docs-python.ru/tutorial/klassy-jazyke-python/peregruzka-metodov/
-    @__is_valid_color.register(int)
-    @__is_valid_color.register(str)
-    def _(self,color):
-        return 0 <= int(color) <= 255
-
-    @__is_valid_color.register(tuple)
-    @__is_valid_color.register(list)
-    def _(self,color):
-        result = True
-        i=0
-        while(i<len(color) and result):
-            result = self.__is_valid_color(i)
-            i+=1
-        return result
-#перегрузка метода для валидации сторон
-    @singledispatch
-    def __is_valid_sides(self, side):
-        pass
-
-    @__is_valid_sides.register(int)
-    @__is_valid_sides.register(str)
-    def _(self,side):
-        return int(side) > 0
-
-    @__is_valid_sides.register(tuple)
-    @__is_valid_sides.register(list)
-    def _(self,side):
-        result=False
-        for s in side:
-            result=self.__is_valid_sides(s)
-        return result
+        if(isinstance(color,list) or isinstance(color,tuple)):
+            result=False
+            for c in color:
+                result=self.__is_valid_color(c)
+            return result
+        elif(isinstance(color,int)):
+            return 0 <= int(color) <= 255
+        return False
+        
+    def __is_valid_sides(self, sides):
+        if(isinstance(sides,list)or isinstance(sides,tuple)):
+            result=False
+            for s in sides:
+                result=self.__is_valid_sides(s)
+            return result
+        elif(isinstance(sides,int)):
+            return int(sides) > 0
+        return False
 
     def __len__(self):
         return sum(self.__sides)
 
-    def __new__(cls,color,*sides):
-        if (not cls.__is_valid_color(color)):
-            print("Не правильно указан код цвета.")
-            return None
     def __init__(self,color,*sides):
-        self.set_color(color)
+        if (not self.__is_valid_color(color)):
+            print("Не правильно указан код цвета.")
+            return
+        self.set_color(*color)
         s=sides
         if(len(sides)!=self.sides_count):
             s=[1]*self.sides_count
-        self.set_sides(self,s)
+        self.set_sides(*s)
 
-    def get_color(self):
-        return self.__color
-    #перегрузка метода
-    @singledispatch
-    def set_color(self,r,g,b):
-        pass
-
-    @set_color.register(tuple)
-    @set_color.register(list)
-    def _(self,colors):
-        result=self.__is_valid_color(colors)
-        if(result):
-            self.__color = list(colors)
-        return result
-    @set_color.register(int)
-    def _(self,r,g,b):
-        result=self.__is_valid_color((r,g,b))
-        if(result):
-            self.__color=(r,g,b)
-            return result
-        print("Неправильно указан код цвета")
-        return result
-    def get_sides(self):
-        return self.__sides
-
-    def set_sides(self,*sides):
-        if(self.__is_valid_sides(*sides)):
-            self.__sides=sides
+    def set_color(self,*color):
+        if(not self.__is_valid_color(color[0])):
+            print("Неправильно указан код цвета")
+            return False
+        if(len(color)==1):
+            if(isinstance(color,list)or isinstance(color,tuple)):
+                self.__color=color
+                return True
+        elif(len(color)==3):
+            self.__color=[color[0],color[1],color[2]]
             return True
         return False
-
+    
+    def set_sides(self,*sides):
+        if(self.__is_valid_sides(*sides)):
+            sl=[]
+            for s in sides:
+                sl.append(s)
+            self.__sides=sl
+            return True
+        return False
+    
+    def get_color(self):
+        return self.__color
+    
+    def get_sides(self):
+        return self.__sides
 class Circle(Figure):
     sides_count = 1
+    
     def __radius(self):
         return self.get_sides()[0]/math.pi
+
     def get_square(self):
-        return math.pi * (self.__radius**2)
+        return math.pi * (self._Figure__radius**2)
 
 class Triangle(Figure):
     sides_count = 3
+
     def get_square(self):
-        p = sum(self.__sides) / 2
-        return math.sqrt(p * (p - self.__sides[0]) * (p - self.__sides[1]) * (p - self.__sides[2]))
+        p = sum(self._Figure__sides) / 2
+        return math.sqrt(p * (p - self._Figure__sides[0]) * (p - self._Figure__sides[1]) * (p - self._Figure__sides[2]))
 
 class Cube(Figure):
     sides_count = 12
 
     def __init__(self, color, *sides):
-        self.set_color(color)
+        if (not self._Figure__is_valid_color(color)):
+            print("Не правильно указан код цвета.")
+            return
+        self.set_color(*color)
         s = sides
         if(len(sides)==1):
-            s = [sides] * self.sides_count
+            s = [sides[0]] * self.sides_count
         elif(len(sides) != self.sides_count):
             s = [1] * self.sides_count
-        self.set_sides(self, s)
+        self.set_sides(*s)
 
-    def set_sides(self,side):
-        if(self.__is_valid_sides(side)):
+    def set_sides(self,*sides):
+        if(len(sides)==1):
             for i in range(0,self.sides_count-1):
-                self.__sides[i]=side
+                self._Figure__sides[i]=sides[0]
             return True
+        elif(len(sides)==self.sides_count):
+            self._Figure__sides=sides
         return False
     def get_volume(self):
-        return self.__sides[0]**3
+        return self._Figure__sides[0]**3
 
 circle1 = Circle((200, 200, 100), 10) # (Цвет, стороны)
 cube1 = Cube((222, 35, 130), 6)
