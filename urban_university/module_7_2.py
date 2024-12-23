@@ -8,11 +8,11 @@ def custom_write(file_name, strings):
     if(not file_exists(file_path)):
         f=open(file_path,"a")
         f.close()
-    with open("file_path", "w") as f:
+    with open(file_path, "w") as f:
         i=1
         for s in strings:
             key = (i, f.tell())
-            f.writelines(s)
+            f.writelines(f"{s}\n")
             strings_positions[key]=s
             i+=1
     return strings_positions
