@@ -46,7 +46,8 @@ class Shop:
                  print(self.__errors[1])
                  return False
              if(self.__is_product_exists(prod)):
-                 print(f"Продукт {prod.name} уже есть в магазине")
+                 #prod.weight+=
+                 print(f"Продукт {prod.name} уже есть в магазине, его общий вес теперь равен {prod.weight}")
                  continue
              else:
                  #if(not self.__file_exists()):
