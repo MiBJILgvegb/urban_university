@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f0124b91-c45f-47af-be03-587fe3d2d025</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>module_7_4.py</StartupFile>
+    <StartupFile>module_9_3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -77,6 +77,12 @@
     <Compile Include="module_7_2.py" />
     <Compile Include="module_7_3.py" />
     <Compile Include="module_7_4.py" />
+    <Compile Include="module_8_1.py" />
+    <Compile Include="module_8_2.py" />
+    <Compile Include="module_8_3.py" />
+    <Compile Include="module_9_1.py" />
+    <Compile Include="module_9_2.py" />
+    <Compile Include="module_9_3.py" />
     <Compile Include="true_math.py" />
     <Compile Include="urban_university.py" />
   </ItemGroup>
