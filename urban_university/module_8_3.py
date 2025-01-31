@@ -56,3 +56,4 @@ except IncorrectCarNumbers as exc:
   print(exc.message)
 else:
   print(f'{third.model} успешно создан')
+

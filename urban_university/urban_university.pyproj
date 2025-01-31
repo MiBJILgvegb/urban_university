@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f0124b91-c45f-47af-be03-587fe3d2d025</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>module_9_3.py</StartupFile>
+    <StartupFile>module_11_1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,11 @@
     <Compile Include="fake_math.py" />
     <Compile Include="module_0_1.py" />
     <Compile Include="module_0_2.py" />
+    <Compile Include="module_10_1.py" />
+    <Compile Include="module_10_2.py" />
+    <Compile Include="module_10_3.py" />
+    <Compile Include="module_10_4.py" />
+    <Compile Include="module_11_1.py" />
     <Compile Include="module_1_1.py" />
     <Compile Include="module_1_2.py" />
     <Compile Include="module_1_3.py" />
@@ -83,12 +88,24 @@
     <Compile Include="module_9_1.py" />
     <Compile Include="module_9_2.py" />
     <Compile Include="module_9_3.py" />
+    <Compile Include="module_9_4.py" />
+    <Compile Include="module_9_5.py" />
+    <Compile Include="module_9_6.py" />
+    <Compile Include="module_9_7.py" />
     <Compile Include="true_math.py" />
     <Compile Include="urban_university.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="module_11\" />
+    <Folder Include="module_11\1\" />
     <Folder Include="module_5\" />
     <Folder Include="module_6\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="module_11\1\file 1.txt" />
+    <Content Include="module_11\1\file 2.txt" />
+    <Content Include="module_11\1\file 3.txt" />
+    <Content Include="module_11\1\file 4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
