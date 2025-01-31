@@ -96,16 +96,8 @@
     <Compile Include="urban_university.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="module_11\" />
-    <Folder Include="module_11\1\" />
     <Folder Include="module_5\" />
     <Folder Include="module_6\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="module_11\1\file 1.txt" />
-    <Content Include="module_11\1\file 2.txt" />
-    <Content Include="module_11\1\file 3.txt" />
-    <Content Include="module_11\1\file 4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
